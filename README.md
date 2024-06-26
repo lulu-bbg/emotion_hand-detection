@@ -1,7 +1,7 @@
 # emotion_hand-detection
 This code connect face and hand gestures in images for easier detection of the emotion they represent.
 
-![add image descrition here]([direct image link here](https://github.com/lulu-bbg/emotion_hand-detection/blob/main/happy_hand%20(2).jpg?raw=true))
+![add image descrition here](https://github.com/lulu-bbg/emotion_hand-detection/blob/main/happy_hand%20(2).jpg?raw=true)
 
 ## The Algorithm
 We used a convolutional neural network (CNN) called resnet18 which basically expidites how nano computers undersatnd patterns in different images of the same thing, this could be a lot of different things like species, actions, emotions, foods, etc. as long as it looks different and you can give it a name. 
