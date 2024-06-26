@@ -1,15 +1,42 @@
 # emotion_hand-detection
-This code connect face and hand gestures for easier detection of the emotion they represent
+This code connect face and hand gestures in images for easier detection of the emotion they represent.
 
 ![add image descrition here](direct image link here)
 
 ## The Algorithm
+We used a convolutional neural network (CNN) called resnet18 which basically expidites how nano computers undersatnd patterns in different images of the same thing, this could be a lot of different things like species, actions, emotions, foods, etc. as long as it looks different and you can give it a name. 
 
-Add an explanation of the algorithm and how it works. Make sure to include details about how the code works, what it depends on, and any other relevant info. Add images or other descriptions for your project here. 
+There are three main component sizes that need to be specificed when running CNN: batch, workers, and epochs. 
+    1. The batch size will determine how many images are shown to the machine at once. 
+    2. Quantity of workers decides how many different batches are proccessed by the machine at once. 
+    3. The epochs are how many times this entire process will happen.
+      - Each epoch shows you Train Loss, Train Accuracy, Val Loss, and Val Accuracy.
+          * Train Loss: A value that guides to the optimization process during training, which basically assesses the error of the model on the training set.
+          * Train Accuracy: Percentage of correct predictions over the dataset.
+          * Val Loss: A value showing how much information is lost when the program reverse engineers the images (compares the output to the input) which assess the performance of a deep learning model on the validation set.
+          * Val Accuracy: Percentage of correct predictions over random images.
+Explanations from baeldung.
+    
+There are some limitations with how this CNN works since it is the programmers job to find out how many epochs are over or under fit. This is because running the same images too many times will create certain niches that are far too specific to fit all the more generalizing patterns in the images, but too little will create too little connections and therfore will misclasify images that should not be under the same class.
+How to find the goldilocks ratio for your own program is pretty loose and on a testing basis. The ideal is set by the limitations of your own equipment. 
+However anything under ten to thirty epchos is pretty unreliable as seen on this data table: https://i.sstatic.net/0TfSp.png
+
 
 ## Running this project
 
-1. Add steps for running this project.
-2. Make sure to include any required libraries that need to be installed for your project to run.
-
-[View a video explanation here](video link)
+1. Chose the emotions you want to represent. Each should have a different facial and hand gesture.
+2. Take at least 150 images for each emotion and label each based on the emotion and a number. Ex mad1, mad2, mad3, etc.
+3. On visual studio code go to jetson-inference/python/training/classification/models and make a folder labeled emotions.
+4. Inside the emotions folder make three folders labeled train, test, and val alongside a file named labels.txt.
+5. labels.txt should have an alphabetical list with the emotions chosen.
+6. The train, test, and val folders should each have a folder named after each emotion. Ex mad, sad, happy, etc.
+7. These emotion folders should each have 10% of the images for their designated emotion in test and val, while the other 80% is in train. (This can be done through FileZilla.)
+8. Then go back to jetson-inference and into ./docker/run.sh, this will allow you to start a new container, execute a command the docker, and pull an image if needed. (which we do need)
+9. Inside the docker go to python/training/classification and input: python3 train.py --model-dir=models/emotions data/emotions (This is the Python script that contains the code for training the model.)
+    - You can play around with the how the model runs with: --batch-size=NumberOfBatchFiles --workers=NumberOfWorkers --epochs=NumberOfEpochs
+    - Then, 'Ctl+C' allows you to stop at anytime, while '--resume' allows you to train your modle where you left off instead of restarting.
+11. When the program is done running through the epochs, ensure you are in jetson-inference/python/training/classification in the docker to then input python3 onnx_export.py --model-dir=models/emotions. This will save the training as resnet18.onnx to your emotions folder.
+12. 'Ctl+D' will exit docker so we can go to our nano now and see what the training did, which also helps us find possible adjustments
+    - Go into jetson-inference/python/training/classification
+    - Set 'NET=models/emotiuons' and 'DATASET=data/emotions' (This simplifies the paths into NET and DATASET)
+    - Finally run, imagenet.py --model=$NET/resnet18.onnx --input_blob=input_0 --output_blob=output_0 --labels=$DATASET/labels.txt $DATASET/test/emotions/'image input name'.jpg 'image output name'.jpg
