@@ -44,5 +44,10 @@ However anything under ten to thirty epchos is pretty unreliable as seen on this
       or
       imagenet.py --model=$NET/resnet18.onnx --input_blob=input_0 --output_blob=output_0 --labels=$DATASET/labels.txt /dev/video0 (if no monitor+) demo.mp4
 
+## The Result
+Trail One- Low percentages of emotion detection(23-30%). Angry, sad, and none were detected easily, but suprised and happy were undetectable. This led to adding hand gestures to the images for the training process to have more distinct patterns between the images.
+
 Trail Two- Video Demo: https://youtu.be/ixWe0OLodj4
 (Nano is detecting all five emotion, but needs different angles to recognize the patterns.)
+
+For 100 epochs and 100 train images, this trail went pretty well. However, while taking the images it is likley I adjusted the camera, even if seeminly insignificant, this had a pretty big impact on what emotions the nano could detect in slightly different angles.
