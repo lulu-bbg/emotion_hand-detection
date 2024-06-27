@@ -57,3 +57,5 @@ For 100 epochs and 100 train images, this trail went pretty well. However, while
 ![none image](https://github.com/lulu-bbg/emotion_hand-detection/blob/main/none.jpg?raw=true)
 ![sad image](https://github.com/lulu-bbg/emotion_hand-detection/blob/main/sad.jpg?raw=true)
 ![sup image](https://github.com/lulu-bbg/emotion_hand-detection/blob/main/sup.jpg?raw=true)
+
+Video Explanation: https://youtu.be/rdM_2vnzhKI
