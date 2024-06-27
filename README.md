@@ -67,4 +67,4 @@ Trail Two- Video Demo: https://youtu.be/ixWe0OLodj4
 ![sad image](https://github.com/lulu-bbg/emotion_hand-detection/blob/main/sad.jpg?raw=true)
 ![sup image](https://github.com/lulu-bbg/emotion_hand-detection/blob/main/sup.jpg?raw=true)
 
-**Video Explanation: https://youtu.be/rdM_2vnzhKI**
+**Video Explanation: https://www.youtube.com/watch?v=7his9rrOS3A**
