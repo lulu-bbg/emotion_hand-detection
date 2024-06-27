@@ -40,3 +40,5 @@ However anything under ten to thirty epchos is pretty unreliable as seen on this
     - Go into jetson-inference/python/training/classification
     - Set 'NET=models/emotiuons' and 'DATASET=data/emotions' (This simplifies the paths into NET and DATASET)
     - Finally run, imagenet.py --model=$NET/resnet18.onnx --input_blob=input_0 --output_blob=output_0 --labels=$DATASET/labels.txt $DATASET/test/emotions/'image input name'.jpg 'image output name'.jpg
+      or
+      imagenet.py --model=$NET/resnet18.onnx --input_blob=input_0 --output_blob=output_0 --labels=$DATASET/labels.txt /dev/video0 (if no monitor+) demo.mp4
