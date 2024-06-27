@@ -3,11 +3,11 @@ This code connect face and hand gestures in images for easier detection of the e
 
 ![Example image for Happy](https://github.com/lulu-bbg/emotion_hand-detection/blob/main/happy_hand%20(2).jpg?raw=true)
 
-```
+```json
 {
-    "firstName": "Luisa",
-    "lastName": "Ortiz",
-    "age": 16
+  "firstName": "Luisa",
+  "lastName": "Ortiz",
+  "age": 16
 }
 ```
 
