@@ -12,9 +12,10 @@ This code connect face and hand gestures in images for easier detection of the e
 ```
 
 ## The Algorithm
-We used a convolutional neural network (CNN) called resnet18 which basically expidites how nano computers undersatnd patterns in different images of the same thing, this could be a lot of different things like species, actions, emotions, foods, etc. as long as it looks different and you can give it a name. 
+We used a convolutional neural network (CNN) called ==resnet18== which basically expidites how nano computers undersatnd patterns in different images of the same thing, this could be a lot of different things like species, actions, emotions, foods, etc. as long as it looks different and you can give it a name. 
 
-There are three main component sizes that need to be specificed when running CNN: batch, workers, and epochs. 
+There are three main component sizes that need to be specificed when running CNN: ==batch, workers, and epochs.==
+
     1. The batch size will determine how many images are shown to the machine at once. 
     2. Quantity of workers decides how many different batches are proccessed by the machine at once. 
     3. The epochs are how many times this entire process will happen.
@@ -25,7 +26,7 @@ There are three main component sizes that need to be specificed when running CNN
           * Val Accuracy: Percentage of correct predictions over random images.
 Explanations from baeldung.
     
-There are some limitations with how this CNN works since it is the programmers job to find out how many epochs are over or under fit. This is because running the same images too many times will create certain niches that are far too specific to fit all the more generalizing patterns in the images, but too little will create too little connections and therfore will misclasify images that should not be under the same class.
+There are some limitations with how this CNN works since it is the programmers job to find out how many epochs are ==over or under fit.== This is because running the same images too many times will create certain ==niches that are far too specific== to fit all the more generalizing patterns in the images, but ==too little will create barley any patterns== and therfore will misclasify images that should not be under the same class.
 How to find the goldilocks ratio for your own program is pretty loose and on a testing basis. The ideal is set by the limitations of your own equipment. 
 However anything under ten to thirty epchos is pretty unreliable as seen on this data table:
 ![Accuracy- Efficiency chart for Epochs](https://github.com/lulu-bbg/emotion_hand-detection/blob/main/Accuracy.png?raw=true)
@@ -34,10 +35,10 @@ However anything under ten to thirty epchos is pretty unreliable as seen on this
 ## Running this project
 
 1. Chose the emotions you want to represent. Each should have a different facial and hand gesture.
-2. Take at least 150 images for each emotion and label each based on the emotion and a number. Ex mad1, mad2, mad3, etc.
+2. Take ==at least== 150 images for each emotion and label each based on the emotion and a number. Ex mad1, mad2, mad3, etc.
 3. On visual studio code go to `jetson-inference/python/training/classification/models` and make a folder labeled emotions.
 4. Inside the emotions folder make three folders labeled train, test, and val alongside a file named labels.txt.
-5. labels.txt should have an alphabetical list with the emotions chosen.
+5. labels.txt should have an ==alphabetical== list with the emotions chosen.
 6. The train, test, and val folders should each have a folder named after each emotion. Ex mad, sad, happy, etc.
 7. These emotion folders should each have 10% of the images for their designated emotion in test and val, while the other 80% is in train. (This can be done through FileZilla.)
 8. Then go back to `jetson-inference` and into `./docker/run.sh`, this will allow you to start a new container, execute a command the docker, and pull an image if needed. (which we do need)
@@ -58,7 +59,7 @@ Trail One- Low percentages of emotion detection(23-30%). Angry, sad, and none we
 Trail Two- Video Demo: https://youtu.be/ixWe0OLodj4
 (Nano is detecting all five emotion, but needs different angles to recognize the patterns.)
 
-For 100 epochs and 100 train images, this trail went pretty well. However, while taking the images it is likley I adjusted the camera, even if seeminly insignificant, this had a pretty big impact on what emotions the nano could detect in slightly different angles. Image detection emotions:
+==For 100 epochs and 100 train images==, this trail went pretty well. However, while taking the images it is likley I adjusted the camera, even if seeminly insignificant, this had a pretty big impact on what emotions the nano could detect in slightly different angles. Image detection emotions:
 
 ![happy image](https://github.com/lulu-bbg/emotion_hand-detection/blob/main/happy.jpg?raw=true)
 ![mad image](https://github.com/lulu-bbg/emotion_hand-detection/blob/main/mad.jpg?raw=true)
@@ -66,4 +67,4 @@ For 100 epochs and 100 train images, this trail went pretty well. However, while
 ![sad image](https://github.com/lulu-bbg/emotion_hand-detection/blob/main/sad.jpg?raw=true)
 ![sup image](https://github.com/lulu-bbg/emotion_hand-detection/blob/main/sup.jpg?raw=true)
 
-Video Explanation: https://youtu.be/rdM_2vnzhKI
+**Video Explanation: https://youtu.be/rdM_2vnzhKI**
