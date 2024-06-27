@@ -1,4 +1,4 @@
-# Emotion_hand- Image Recognition
+# Image Recognition - emotion_hand
 This code connect face and hand gestures in images for easier detection of the emotion they represent.
 
 ![Example image for Happy](https://github.com/lulu-bbg/emotion_hand-detection/blob/main/happy_hand%20(2).jpg?raw=true)
