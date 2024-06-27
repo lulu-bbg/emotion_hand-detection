@@ -50,4 +50,10 @@ Trail One- Low percentages of emotion detection(23-30%). Angry, sad, and none we
 Trail Two- Video Demo: https://youtu.be/ixWe0OLodj4
 (Nano is detecting all five emotion, but needs different angles to recognize the patterns.)
 
-For 100 epochs and 100 train images, this trail went pretty well. However, while taking the images it is likley I adjusted the camera, even if seeminly insignificant, this had a pretty big impact on what emotions the nano could detect in slightly different angles.
+For 100 epochs and 100 train images, this trail went pretty well. However, while taking the images it is likley I adjusted the camera, even if seeminly insignificant, this had a pretty big impact on what emotions the nano could detect in slightly different angles. Image detection emotions:
+
+!(https://github.com/lulu-bbg/emotion_hand-detection/blob/main/sup.jpg?raw=true)
+!()
+!()
+!()
+!()
