@@ -43,3 +43,6 @@ However anything under ten to thirty epchos is pretty unreliable as seen on this
     - Finally run, imagenet.py --model=$NET/resnet18.onnx --input_blob=input_0 --output_blob=output_0 --labels=$DATASET/labels.txt $DATASET/test/emotions/'image input name'.jpg 'image output name'.jpg
       or
       imagenet.py --model=$NET/resnet18.onnx --input_blob=input_0 --output_blob=output_0 --labels=$DATASET/labels.txt /dev/video0 (if no monitor+) demo.mp4
+
+Trail One Video Demo:
+![Demo](https://youtu.be/ixWe0OLodj4)
