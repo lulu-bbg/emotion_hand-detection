@@ -1,7 +1,7 @@
 # emotion_hand-detection
 This code connect face and hand gestures in images for easier detection of the emotion they represent.
 
-![add image descrition here](https://github.com/lulu-bbg/emotion_hand-detection/blob/main/happy_hand%20(2).jpg?raw=true)
+![Example image for Happy](https://github.com/lulu-bbg/emotion_hand-detection/blob/main/happy_hand%20(2).jpg?raw=true)
 
 ## The Algorithm
 We used a convolutional neural network (CNN) called resnet18 which basically expidites how nano computers undersatnd patterns in different images of the same thing, this could be a lot of different things like species, actions, emotions, foods, etc. as long as it looks different and you can give it a name. 
@@ -15,6 +15,8 @@ There are three main component sizes that need to be specificed when running CNN
           * Train Accuracy: Percentage of correct predictions over the dataset.
           * Val Loss: A value showing how much information is lost when the program reverse engineers the images (compares the output to the input) which assess the performance of a deep learning model on the validation set.
           * Val Accuracy: Percentage of correct predictions over random images.
+
+![Efficiency chart for Epochs](https://github.com/lulu-bbg/emotion_hand-detection/blob/main/Accuracy.png?raw=true)
 Explanations from baeldung.
     
 There are some limitations with how this CNN works since it is the programmers job to find out how many epochs are over or under fit. This is because running the same images too many times will create certain niches that are far too specific to fit all the more generalizing patterns in the images, but too little will create too little connections and therfore will misclasify images that should not be under the same class.
