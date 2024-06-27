@@ -52,8 +52,8 @@ Trail Two- Video Demo: https://youtu.be/ixWe0OLodj4
 
 For 100 epochs and 100 train images, this trail went pretty well. However, while taking the images it is likley I adjusted the camera, even if seeminly insignificant, this had a pretty big impact on what emotions the nano could detect in slightly different angles. Image detection emotions:
 
-!(https://github.com/lulu-bbg/emotion_hand-detection/blob/main/sup.jpg?raw=true)
-!(https://github.com/lulu-bbg/emotion_hand-detection/blob/main/sad.jpg?raw=true)
-!()
-!()
-!()
+![happy image](https://github.com/lulu-bbg/emotion_hand-detection/blob/main/happy.jpg?raw=true)
+![mad image](https://github.com/lulu-bbg/emotion_hand-detection/blob/main/mad.jpg?raw=true)
+![none image](https://github.com/lulu-bbg/emotion_hand-detection/blob/main/none.jpg?raw=true)
+![sad image](https://github.com/lulu-bbg/emotion_hand-detection/blob/main/sad.jpg?raw=true)
+![sup image](https://github.com/lulu-bbg/emotion_hand-detection/blob/main/sup.jpg?raw=true)
