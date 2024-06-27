@@ -44,4 +44,5 @@ However anything under ten to thirty epchos is pretty unreliable as seen on this
       or
       imagenet.py --model=$NET/resnet18.onnx --input_blob=input_0 --output_blob=output_0 --labels=$DATASET/labels.txt /dev/video0 (if no monitor+) demo.mp4
 
-Trail One Video Demo: https://youtu.be/ixWe0OLodj4
+Trail Two- Video Demo: https://youtu.be/ixWe0OLodj4
+(Nano is detecting all five emotion, but needs different angles to recognize the patterns.)
