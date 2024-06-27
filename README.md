@@ -15,14 +15,12 @@ There are three main component sizes that need to be specificed when running CNN
           * Train Accuracy: Percentage of correct predictions over the dataset.
           * Val Loss: A value showing how much information is lost when the program reverse engineers the images (compares the output to the input) which assess the performance of a deep learning model on the validation set.
           * Val Accuracy: Percentage of correct predictions over random images.
-
-![Efficiency chart for Epochs](https://github.com/lulu-bbg/emotion_hand-detection/blob/main/Accuracy.png?raw=true)
 Explanations from baeldung.
     
 There are some limitations with how this CNN works since it is the programmers job to find out how many epochs are over or under fit. This is because running the same images too many times will create certain niches that are far too specific to fit all the more generalizing patterns in the images, but too little will create too little connections and therfore will misclasify images that should not be under the same class.
 How to find the goldilocks ratio for your own program is pretty loose and on a testing basis. The ideal is set by the limitations of your own equipment. 
-However anything under ten to thirty epchos is pretty unreliable as seen on this data table: https://i.sstatic.net/0TfSp.png
-
+However anything under ten to thirty epchos is pretty unreliable as seen on this data table:
+![Efficiency chart for Epochs](https://github.com/lulu-bbg/emotion_hand-detection/blob/main/Accuracy.png?raw=true)
 
 ## Running this project
 
