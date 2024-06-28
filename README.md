@@ -68,3 +68,4 @@ Trial Two- Video Demo: https://youtu.be/ixWe0OLodj4
 ![sup image](https://github.com/lulu-bbg/emotion_hand-detection/blob/main/sup.jpg?raw=true)
 
 **Video Explanation: https://www.youtube.com/watch?v=7his9rrOS3A**
+![train.py](https://github.com/lulu-bbg/emotion_hand-detection/blob/main/train.py)
