@@ -48,7 +48,7 @@ However anything under ten to thirty epchos is pretty unreliable as seen on this
 11. When the program is done running through the epochs, ensure you are in `jetson-inference/python/training/classification` in the docker to then `input python3 onnx_export.py --model-dir=models/emotions`. This will save the training as `resnet18.onnx` to your emotions folder.
 12. 'Ctl+D' will exit docker so we can go to our nano now and see what the training did, which also helps us find possible adjustments
     - Go into `jetson-inference/python/training/classification`
-    - Set `NET=models/emotiuons` and `DATASET=data/emotions` (This simplifies the paths into NET and DATASET)
+    - Set `NET=models/emotiuons` and `https://github.com/lulu-bbg/emotion_hand-detectionDATASET=data/emotions` (This simplifies the paths into NET and DATASET)
     - Finally run, `imagenet.py --model=$NET/resnet18.onnx --input_blob=input_0 --output_blob=output_0 --labels=$DATASET/labels.txt $DATASET/test/emotions/"image input name".jpg "image output name".jpg`
       or
       `imagenet.py --model=$NET/resnet18.onnx --input_blob=input_0 --output_blob=output_0 --labels=$DATASET/labels.txt /dev/video0 (if no monitor+) demo.mp4`
